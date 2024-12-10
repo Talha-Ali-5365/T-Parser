@@ -65,5 +65,4 @@ We welcome contributions to T-Parser! If you're interested in contributing, plea
 
 **License**
 -------
-
-T-Parser is licensed under the MIT License. See `LICENSE` for details.
+T-Parser is licensed under the [MIT License](LICENSE).
