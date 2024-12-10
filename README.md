@@ -4,7 +4,7 @@
 
 A cutting-edge document parsing application that leverages the power of Google Gemini Vision and LLaMA 3.3 from Groq to extract valuable insights from your documents.
 
-[Watch a demo video of T-Parser in action](./images/video.mp4)
+[Watch a demo video of T-Parser in action](https://youtu.be/3o7txPbc2aw)
 
 **Overview**
 ------------
