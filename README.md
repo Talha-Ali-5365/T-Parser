@@ -24,7 +24,6 @@ T-Parser is designed to simplify the process of extracting relevant information 
 
 Here are some examples of documents that T-Parser can parse:
 
-*   ID Card: ![ID Card](./images/Idcard.jpg) ![ID Card](./images/idcard.png)
 *   Invoice: ![Invoice](./images/invoice.jpg) ![Invoice](./images/invoice.png)
 *   Medical Handwritten Transcript: ![Medical Handwritten Transcript](./images/medical_org.png) ![Medical Handwritten Transcript](./images/medical.png)
 *   Engineering Drawing: ![Engineering Drawing](./images/piston-drawing-62.jpg) ![Engineering Drawing](./images/piston.png)
