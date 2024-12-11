@@ -49,6 +49,13 @@ If certain sections are missing or unclear, omit them or include them with a nul
 
 The document is provided as images, and you may need to perform OCR to extract text. Be aware that OCR may introduce errors, so proofread the extracted text and correct any obvious mistakes.
 
+"""
+
+
+groq_prompt = """
+OUTPUT THE GIVEN TEXT IN FOLLOWING JSON FORMAT:
+IF THE OUTPUT IS ALREADY IN THIS FORMAT JUST DO IT AGAIN AS A CONFIRMATION:
+
 **Examples:**
 
 Example for an Invoice:

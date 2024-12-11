@@ -8,8 +8,8 @@ if not os.path.exists('static'):
 import fitz  
 from PIL import Image
 from IPython.display import Image as IPImage
-from constants import vision_prompt
-from init import document_parser, logger
+from constants import vision_prompt,groq_prompt
+from init import document_parser, logger,llm
 from config import supported_file_types, supported_image_types, model_name, num_portions_per_page
 
 def extract_document_portions(file_path: str, num_portions: int) -> dict:
@@ -31,7 +31,9 @@ def extract_document_portions(file_path: str, num_portions: int) -> dict:
         model = genai.GenerativeModel(model_name=model_name)
         response = model.generate_content([vision_prompt, *image_list])
         image_list.clear()
-        return document_parser.parse(response.text)
+        out = llm.invoke(groq_prompt+response.text)
+        print(out)
+        return document_parser.parse(out.content)
 
     doc = fitz.open(file_path)
 
@@ -64,7 +66,7 @@ def extract_document_portions(file_path: str, num_portions: int) -> dict:
         os.remove(name)
     logger.info("Parsed document successfully")
 
-    return document_parser.parse(response.content)
+    return document_parser.parse(response.text)
 
 def parse_document(file_path: str) -> dict:
     """
