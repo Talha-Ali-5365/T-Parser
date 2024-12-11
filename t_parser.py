@@ -32,7 +32,6 @@ def extract_document_portions(file_path: str, num_portions: int) -> dict:
         response = model.generate_content([vision_prompt, *image_list])
         image_list.clear()
         out = llm.invoke(groq_prompt+response.text)
-        print(out)
         return document_parser.parse(out.content)
 
     doc = fitz.open(file_path)
